@@ -1,0 +1,83 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #ECF0EC url(/images/sky_blue.jpg) repeat;
+	text-align: justify;
+	font-family: 'Arvo', serif;
+	font-size: 14px;
+	color: #303030;
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    clear: both;
+    alignment: center;
+    background-color: #303030;
+    padding-top: 10px;
+}
+
+#headercontainer, #footer{
+    margin-left:auto;
+    margin-right:auto;
+    width:900px;
+    clear:     both;
+}
+#headercontainer div {
+    display: inline;
+}
+
+#headercontainer span, a {
+    color: #bbbbbb;
+}
+
+#menu {
+    float: right;
+}
+#menu ul {
+	margin: 0px;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#page {
+    margin-left:auto;
+    margin-right:auto;
+    width:900px;
+    clear:     both;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#content {
+    float: left;
+    width: 60%;
+    background-color: #f8f8f8;
+    padding:  10px;
+}
+
+#sidebar {
+    float: right;
+    width: 30%;
+    background-color: #f8f8f8;
+    padding:  10px;
+}
+
+.roundbox {
+    border-radius: 5px;
+    border-width: 1px;
+    border-style:  solid;
+    border-color: #cccccc;
+    background-color: #fefefe;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#footer {
+    text-align: center;
+    padding:  10px;
+}

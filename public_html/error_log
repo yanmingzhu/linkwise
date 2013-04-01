@@ -1,0 +1,62 @@
+[30-Mar-2013 21:14:40] no user id
+[30-Mar-2013 21:17:28] no user id
+[30-Mar-2013 21:17:58] no user id
+[30-Mar-2013 21:18:02] no user id
+[30-Mar-2013 21:18:11] no user id
+[30-Mar-2013 21:19:05] no user id
+[30-Mar-2013 21:19:09] no user id
+[31-Mar-2013 10:18:43] no user id
+[31-Mar-2013 10:25:07] no user id
+[31-Mar-2013 10:25:26] no user id
+[31-Mar-2013 10:25:37] no user id
+[31-Mar-2013 10:27:14] no user id
+[31-Mar-2013 10:28:18] no user id
+[31-Mar-2013 10:28:27] no user id
+[31-Mar-2013 10:31:29] no user id
+[31-Mar-2013 10:36:29] no user id
+[31-Mar-2013 10:36:52] no user id
+[31-Mar-2013 10:59:43] no user id
+[31-Mar-2013 11:06:03] no user id
+[31-Mar-2013 11:07:54] no user id
+[31-Mar-2013 11:08:11] no user id
+[31-Mar-2013 11:08:43] no user id
+[31-Mar-2013 11:11:03] no user id
+[31-Mar-2013 11:17:59] no user id
+[31-Mar-2013 11:18:03] no user id
+[31-Mar-2013 11:18:22] no user id
+[31-Mar-2013 11:18:38] no user id
+[31-Mar-2013 11:22:23] no user id
+[31-Mar-2013 11:23:32] no user id
+[31-Mar-2013 11:23:41] no user id
+[31-Mar-2013 11:24:10] no user id
+[31-Mar-2013 11:25:17] no user id
+[31-Mar-2013 11:25:35] no user id
+[31-Mar-2013 11:26:19] 776842570
+[31-Mar-2013 11:26:20] Array
+(
+    [id] => 776842570
+    [name] => Yanming Zhu
+    [first_name] => Yanming
+    [last_name] => Zhu
+    [link] => http://www.facebook.com/yanming.zhu
+    [username] => yanming.zhu
+    [hometown] => Array
+        (
+            [id] => 112172772141867
+            [name] => Chongqing, China
+        )
+
+    [location] => Array
+        (
+            [id] => 103702433002495
+            [name] => Herndon, Virginia
+        )
+
+    [timezone] => -4
+    [locale] => en_US
+    [verified] => 1
+    [updated_time] => 2012-11-22T20:57:13+0000
+)
+
+[31-Mar-2013 11:26:36] no user id
+[31-Mar-2013 11:31:11] no user id
