@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Link Wise</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
-<link href="<?php echo base_url("css/main.css"); ?>" rel="stylesheet" type="text/css" />
+<link href="/css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/linkwise.js"></script>
+<link href="/jqueryui/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/jqueryui/jquery-ui-1.10.2.custom.js"></script>
 </head>
 <body>
 
@@ -33,6 +33,7 @@
                 alert("not logged in " + response.status);
             }
         });
+
     };
 
     function login() {
@@ -76,21 +77,29 @@
     }
 
     // Load the SDK Asynchronously
-  (function(d, debug){
-     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement('script'); js.id = id; js.async = true;
-     js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-     ref.parentNode.insertBefore(js, ref);
-   }(document, /*debug*/ false));
+    (function(d, debug){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document, /*debug*/ false));
+
+
+    $(document).ready(function(){
+        $(".subscribe_button").click(subscribeEvent);
+        $(".unsubscribe_button").click(unsubscribeEvent);
+        $("#sidedatepicker").datepicker({onSelect:pickDate});
+        $("#createdatepicker").datepicker();
+    });
 </script>
 
-
+<?php         date_default_timezone_set("America/Los_Angeles"); ?>
 <!-- start header -->
 <div id="header">
     <div id="headercontainer">
         <div id="logo">
-            <span>Link Wise</span>
+            <a href="/">Link Wise</a>
         </div>
         <?php require_once APPPATH . 'libraries/facebook.php';
                    $facebook = new Facebook(array(
@@ -105,18 +114,15 @@
                         $userInfo = $facebook->api('/' . $userId);
                          error_log(print_r($userInfo, true));
                     }
-                    else error_log('no user id');
+//                    else error_log('no user id');
         ?>
         <div id="menu">
             <ul>
-                <?php $username = $this->session->userdata('username');
-                      if (!$username) :?>
-
-                <fb:login-button onclick="login"></fb:login-button>
-                <li class="active"><a id="login" href="#" onclick="login">Sign in</a></li>
-                <?php else: ?>
-                <li class="active"><a id="logout" href="#" onclick="logout"><?= $username ?></a></li>
-                <?php endif; ?>
+                <?php if (get_uid()) { ?>
+                    <li><?= $user_name ?></li>
+                <?php } else { ?>
+                    <li><a id="login" href="/user/signon" onclick="login">Sign On</a></li>
+                <?php } ?>
             </ul>
         </div>
     </div>

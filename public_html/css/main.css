@@ -3,9 +3,13 @@ body {
 	padding: 0px;
 	background: #ECF0EC url(/images/sky_blue.jpg) repeat;
 	text-align: justify;
-	font-family: 'Arvo', serif;
+//	font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,FreeSans,sans-serif;
+    font-family: 'proxima-nova', Arial,Helvetica,sans-serif;
 	font-size: 14px;
-	color: #303030;
+}
+
+a {
+    text-decoration: none;
 }
 
 #header {
@@ -15,7 +19,12 @@ body {
     clear: both;
     alignment: center;
     background-color: #303030;
+    color: #bbbbbb;
     padding-top: 10px;
+}
+
+#header a {
+    color: #bbbbbb;
 }
 
 #headercontainer, #footer{
@@ -28,8 +37,13 @@ body {
     display: inline;
 }
 
-#headercontainer span, a {
+#headercontainer span {
     color: #bbbbbb;
+}
+
+#logo {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 #menu {
@@ -80,4 +94,77 @@ body {
 #footer {
     text-align: center;
     padding:  10px;
+}
+
+#signonbox {
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px 10px 10px 10px;
+}
+.loginform ul {
+    list-style: none;
+}
+
+.loginform li {
+    margin-top: 10px;
+}
+
+.loginform label {
+    width: 100px;
+    margin-right: 15px;
+    text-align: right;
+    display: inline-block;
+}
+
+#signup {
+    float: left;
+    width: 45%;
+    padding:  2%;
+}
+
+#signon {
+    float: left;
+    border-left: 1px solid green;
+    width: 45%;
+    padding:  2%;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+#sidebar ul {
+    list-style: none;
+}
+
+.subscribe_button {
+}
+
+.unsubscribe_button {
+}
+
+.clear{
+    clear: both;
+}
+
+.clickbutton {
+    background: -moz-linear-gradient(center top , #FEFEFE 0%, #E9E9E9 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #E4E4E4;
+    box-shadow: 0 1px 1px #CBCBCB, 0 1px 0 #FFFFFF inset;
+    height: 12px;
+    width: 40px;
+    padding:  2px 5px 2px 5px;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+}
+
+.eventsummary {
+    margin-top: 10px;
+}
+
+#sidebar ul {
+    -moz-padding-start: 10px;
 }
